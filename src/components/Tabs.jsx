@@ -2,6 +2,7 @@ import ButtonTab from "./ButtonTabs";
 import CodeTab from "./CodeTab";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { preview } from "./Preview";
 
 export default function Tabs() {
   const tabs = useSelector((state) => state.tabs);
