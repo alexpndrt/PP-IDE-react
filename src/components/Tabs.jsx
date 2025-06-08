@@ -1,3 +1,5 @@
+import CodeTabs from "./CodeTabs";
+
 export default function Tabs() {
   return (
     <div className="flex grow">
@@ -7,7 +9,7 @@ export default function Tabs() {
         <button>JS</button>
       </div>
       <div className="w-full grow relative">
-        <p>Le code ...</p>
+        <CodeTabs />
       </div>
     </div>
   );
