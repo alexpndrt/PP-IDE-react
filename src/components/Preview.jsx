@@ -1,11 +1,10 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 
 export default function Preview() {
-  
-  const tabs = useSelector(state => state.tabs)
+  const tabs = useSelector((state) => state.tabs);
 
   function getCode(lang) {
-    return tabs.find(obj => obj.lang === lang).code
+    return tabs.find((obj) => obj.lang === lang).code;
   }
 
   const srcDoc = `
@@ -19,13 +18,15 @@ export default function Preview() {
       <script>${getCode("javascript")}</script>
     </body>
   </html>
-  `
-  
+  `;
+
   return (
     <div className="absolute top-0 left-0 w-full h-full bg-zinc-900">
-      <iframe 
-      className="block w-full h-full"
-      srcDoc={srcDoc} sandbox="allow-scripts"></iframe>
+      <iframe
+        className="block w-full h-full"
+        srcDoc={srcDoc}
+        sandbox="allow-scripts"
+      ></iframe>
     </div>
-  )
+  );
 }
