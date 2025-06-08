@@ -28,7 +28,7 @@ export default function Tabs() {
           id={tabIndex}
           code={tabs.find((obj) => obj.id === tabIndex).code}
         />
-        {previewData && <Preview />}
+        {previewData.preview && <Preview />}
       </div>
     </div>
   );
